@@ -1,0 +1,11 @@
+# Same as .gitignore
+target
+.settings
+.classpath
+.project
+.idea
+*.iml
+
+# Ignore files related to Docker
+.dockerignore
+Dockerfile
