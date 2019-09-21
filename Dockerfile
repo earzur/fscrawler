@@ -49,21 +49,20 @@ RUN set -ex \
     && unzip /root/fscrawler/distribution/es5/target/*.zip -d /root/fscrawler_tmp && mv /root/fscrawler_tmp/* /root/fscrawler_es5
 
 ### Runtime
-# --build-arg addpkgs="<tesseract-ocr-lang1> <tesseract-ocr-lang2> ..." Additional Package Names
 # --build-arg es=<es7|es6|es5> Supported Elasticsearch Version
 FROM openjdk:8-jdk AS runtime
 
-ARG addpkgs
 RUN set -ex \
     && apt-get update \
     && apt-get install -y \
         tesseract-ocr \
-        ${addpkgs} \
+        tesseract-ocr-eng \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 ARG es=es7
 COPY --from=build /root/fscrawler_${es} /usr/share/fscrawler
+RUN set -ex \
+    && ln -sn /usr/share/fscrawler/bin/fscrawler /usr/bin/
 
-ENV PATH=/usr/share/fscrawler/bin:$PATH
 WORKDIR /usr/share/fscrawler
