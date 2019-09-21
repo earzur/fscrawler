@@ -1,6 +1,7 @@
-### Download and cache the dependency jar
-FROM maven:3.3-jdk-8 AS deps
+FROM maven:3.3-jdk-8 AS build
 
+### Download and cache the dependency jar
+WORKDIR /root/fscrawler 
 COPY ./pom.xml /root/fscrawler/pom.xml
 COPY ./beans/pom.xml /root/fscrawler/beans/pom.xml
 COPY ./cli/pom.xml /root/fscrawler/cli/pom.xml
@@ -30,19 +31,13 @@ COPY ./settings/pom.xml /root/fscrawler/settings/pom.xml
 COPY ./test-documents/pom.xml /root/fscrawler/test-documents/pom.xml
 COPY ./test-framework/pom.xml /root/fscrawler/test-framework/pom.xml
 COPY ./tika/pom.xml /root/fscrawler/tika/pom.xml
-
-WORKDIR /root/fscrawler 
 RUN set -ex \
     && mvn -B -s /usr/share/maven/ref/settings-docker.xml clean dependency:resolve dependency:resolve-plugins
 
 ### Build and Package into zip
-FROM maven:3.3-jdk-8 AS build
-
-COPY --from=deps /usr/share/maven/ref /usr/share/maven/ref
 COPY . /root/fscrawler
-WORKDIR /root/fscrawler 
 RUN set -ex \
-    && mvn -B package -Dtest=false
+    && mvn -B -s /usr/share/maven/ref/settings-docker.xml install -DskipTests
 RUN set -ex \
     && unzip /root/fscrawler/distribution/es7/target/*.zip -d /root/fscrawler_tmp && mv /root/fscrawler_tmp/* /root/fscrawler_es7 \
     && unzip /root/fscrawler/distribution/es6/target/*.zip -d /root/fscrawler_tmp && mv /root/fscrawler_tmp/* /root/fscrawler_es6 \
