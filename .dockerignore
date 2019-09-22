@@ -8,4 +8,4 @@ target
 
 # Ignore files related to Docker
 .dockerignore
-Dockerfile
+docker
