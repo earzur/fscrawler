@@ -32,6 +32,13 @@ RUN set -ex \
 
 FROM openjdk:8-jdk AS runtime
 
+RUN set -ex \
+    && apt-get update \
+    && apt-get install -y \
+        gettext-base \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 COPY --from=build /root/fscrawler_dist /usr/share/fscrawler
 RUN set -ex \
     && ln -sn /usr/share/fscrawler/bin/fscrawler /usr/bin/
