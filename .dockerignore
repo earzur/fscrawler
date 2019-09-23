@@ -1,0 +1,23 @@
+# Same as .gitignore
+target
+.settings
+.classpath
+.project
+.idea
+*.iml
+
+# Ignore files in-related to Docker
+.dockerignore
+docker
+
+# Ignore files un-related to maven
+.git
+.gitignore
+
+deploy-settings.xml
+relase.sh
+.travis.yml
+
+*.md
+LICENSE
+NOTICE
