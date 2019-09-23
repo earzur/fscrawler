@@ -42,22 +42,3 @@ RUN set -ex \
     && unzip /root/fscrawler/distribution/es7/target/*.zip -d /root/fscrawler_tmp && mv /root/fscrawler_tmp/* /root/fscrawler_es7 \
     && unzip /root/fscrawler/distribution/es6/target/*.zip -d /root/fscrawler_tmp && mv /root/fscrawler_tmp/* /root/fscrawler_es6 \
     && unzip /root/fscrawler/distribution/es5/target/*.zip -d /root/fscrawler_tmp && mv /root/fscrawler_tmp/* /root/fscrawler_es5
-
-### Runtime
-# --build-arg es=<es7|es6|es5> Supported Elasticsearch Version
-FROM openjdk:8-jdk AS runtime
-
-RUN set -ex \
-    && apt-get update \
-    && apt-get install -y \
-        tesseract-ocr \
-        tesseract-ocr-eng \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-ARG es=es7
-COPY --from=build /root/fscrawler_${es} /usr/share/fscrawler
-RUN set -ex \
-    && ln -sn /usr/share/fscrawler/bin/fscrawler /usr/bin/
-
-WORKDIR /usr/share/fscrawler
