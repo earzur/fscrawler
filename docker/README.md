@@ -12,9 +12,9 @@ Info: Unfortunately, this repository is still experimental. As a result, changes
 
     [dadoonet/fscrawler](https://github.com/dadoonet/fscrawler)
 
-- Tags and Respective git branch links
+- Tags and Respective `Dockerfile` links
 
-    [See last section for details](#tags-and-respective-git-branch-links)
+    [See last section for details](#tags-and-respective-dockerfile-links)
 
 ## How to Run
 
@@ -175,37 +175,37 @@ By default, FSCrawler needs the user home(exactly `~/.fscrawler` ) as a configur
 $ docker run -it --rm -u 1000 -v ${PWD}/config:/tmp/config -v ${PWD}/data:/tmp/es:ro toto1310/fscrawler fscrawler --config_dir /tmp/config job_name
 ```
 
-## Tags and Respective git branch links
+## Tags and Respective `Dockerfile` links
 
 - 2.7-SNAPSHOT(current)
     - For Elasticsearch 7
-      - [`latest`, `2.7-SNAPSHOT`, `2.7-SNAPSHOT-es7-eng`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
-      - [`2.7-SNAPSHOT-es7-nolang`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
-      - [`2.7-SNAPSHOT-es7-fra`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
-      - [`2.7-SNAPSHOT-es7-jpn`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
+      - [`2.7-SNAPSHOT-es7-nolang`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.7/docker/es7/Dockerfile)
+      - [`2.7-SNAPSHOT-es7-eng`, `2.7-SNAPSHOT`, `latest`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.7/docker/es7/eng/Dockerfile)
+      - [`2.7-SNAPSHOT-es7-fra`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.7/docker/es7/fra/Dockerfile)
+      - [`2.7-SNAPSHOT-es7-jpn`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.7/docker/es7/jpn/Dockerfile)
     - For Elasticsearch 6
-      - [`2.7-SNAPSHOT-es6-nolang`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
-      - [`2.7-SNAPSHOT-es6-eng`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
-      - [`2.7-SNAPSHOT-es6-fra`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
-      - [`2.7-SNAPSHOT-es6-jpn`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
+      - [`2.7-SNAPSHOT-es6-nolang`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.7/docker/es6/Dockerfile)
+      - [`2.7-SNAPSHOT-es6-eng`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.7/docker/es6/eng/Dockerfile)
+      - [`2.7-SNAPSHOT-es6-fra`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.7/docker/es6/fra/Dockerfile)
+      - [`2.7-SNAPSHOT-es6-jpn`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.7/docker/es6/jpn/Dockerfile)
     - For Elasticsearch 5
-      - [`2.7-SNAPSHOT-es5-nolang`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
-      - [`2.7-SNAPSHOT-es5-eng`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
-      - [`2.7-SNAPSHOT-es5-fra`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
-      - [`2.7-SNAPSHOT-es5-jpn`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
+      - [`2.7-SNAPSHOT-es5-nolang`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.7/docker/es5/Dockerfile)
+      - [`2.7-SNAPSHOT-es5-eng`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.7/docker/es5/eng/Dockerfile)
+      - [`2.7-SNAPSHOT-es5-fra`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.7/docker/es5/fra/Dockerfile)
+      - [`2.7-SNAPSHOT-es5-jpn`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.7/docker/es5/jpn/Dockerfile)
 - 2.6
     - For Elasticsearch 6
-      - [`2.6`, `2.6-es6-eng`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
-      - [`2.6-es6-nolang`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
-      - [`2.6-es6-fra`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
-      - [`2.6-es6-jpn`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
+      - [`2.6-es6-nolang`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.6/docker/es6/Dockerfile)
+      - [`2.6-es6-eng`, `2.6`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.6/docker/es6/eng/Dockerfile)
+      - [`2.6-es6-fra`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.6/docker/es6/fra/Dockerfile)
+      - [`2.6-es6-jpn`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.6/docker/es6/jpn/Dockerfile)
     - For Elasticsearch 5
-      - [`2.6-es5-nolang`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
-      - [`2.6-es5-eng`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
-      - [`2.6-es5-fra`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
-      - [`2.6-es5-jpn`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
+      - [`2.6-es5-nolang`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.6/docker/es5/Dockerfile)
+      - [`2.6-es5-eng`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.6/docker/es5/eng/Dockerfile)
+      - [`2.6-es5-fra`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.6/docker/es5/fra/Dockerfile)
+      - [`2.6-es5-jpn`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.6/docker/es5/jpn/Dockerfile)
 - 2.5
-    - [`2.5`, `2.5-eng`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.5/docker)
-    - [`2.5-nolang`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.5/docker)
-    - [`2.5-fra`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.5/docker)
-    - [`2.5-jpn`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.5/docker)
+    - [`2.5-nolang`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.5/docker/Dockerfile)
+    - [`2.5-eng`, `2.5`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.5/docker/eng/Dockerfile)
+    - [`2.5-fra`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.5/docker/fra/Dockerfile)
+    - [`2.5-jpn`](https://github.com/toto1310/fscrawler/blob/dockerfile-2.5/docker/jpn/Dockerfile)
