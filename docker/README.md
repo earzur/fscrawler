@@ -12,7 +12,7 @@ Info: Unfortunately, this repository is still experimental. As a result, changes
 
     [dadoonet/fscrawler](https://github.com/dadoonet/fscrawler)
 
-- Dockerfile(s)
+- Tags and Respective git branch links
 
     [See last section for details](#tags-and-respective-git-branch-links)
 
@@ -178,9 +178,8 @@ $ docker run -it --rm -u 1000 -v ${PWD}/config:/tmp/config -v ${PWD}/data:/tmp/e
 ## Tags and Respective git branch links
 
 - 2.7-SNAPSHOT(current)
-    - [`latest`, `2.7-SNAPSHOT`, `2.7-SNAPSHOT-es7-eng`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
-    - [`2.7-SNAPSHOT-build`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
     - For Elasticsearch 7
+      - [`latest`, `2.7-SNAPSHOT`, `2.7-SNAPSHOT-es7-eng`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
       - [`2.7-SNAPSHOT-es7-nolang`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
       - [`2.7-SNAPSHOT-es7-fra`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
       - [`2.7-SNAPSHOT-es7-jpn`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
@@ -195,9 +194,8 @@ $ docker run -it --rm -u 1000 -v ${PWD}/config:/tmp/config -v ${PWD}/data:/tmp/e
       - [`2.7-SNAPSHOT-es5-fra`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
       - [`2.7-SNAPSHOT-es5-jpn`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.7/docker)
 - 2.6
-    - [`2.6`, `2.6-es6-eng`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
-    - [`2.6-build`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
     - For Elasticsearch 6
+      - [`2.6`, `2.6-es6-eng`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
       - [`2.6-es6-nolang`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
       - [`2.6-es6-fra`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
       - [`2.6-es6-jpn`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
