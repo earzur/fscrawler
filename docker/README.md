@@ -208,6 +208,6 @@ $ docker run -it --rm -u 1000 -v ${PWD}/config:/tmp/config -v ${PWD}/data:/tmp/e
       - [`2.6-es5-jpn`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.6/docker)
 - 2.5
     - [`2.5`, `2.5-eng`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.5/docker)
-    - [`2.5-es6-nolang`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.5/docker)
-    - [`2.5-es6-fra`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.5/docker)
-    - [`2.5-es6-jpn`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.5/docker)
+    - [`2.5-nolang`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.5/docker)
+    - [`2.5-fra`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.5/docker)
+    - [`2.5-jpn`](https://github.com/toto1310/fscrawler/tree/dockerfile-2.5/docker)
