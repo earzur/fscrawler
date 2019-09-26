@@ -25,6 +25,71 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <configuration>
+                    <images>
+                        <image>
+                            <alias>fscrawler-es7-nolang</alias>
+                            <name>toto1310/fscrawler:${project.version}-es7-nolang</name>
+                            <build> 
+                                <dockerFile>Dockerfile</dockerFile>
+                                <assembly>
+                                    <descriptor>${project.parent.basedir}/src/main/assembly/assembly.xml</descriptor>
+                                    <mode>tgz</mode>
+                                </assembly>
+                            </build>
+                        </image>
+                        <image>
+                            <alias>fscrawler-es7-eng</alias>
+                            <name>toto1310/fscrawler:${project.version}-es7-eng</name>
+                            <build> 
+                                <dockerFile>Dockerfile</dockerFile>
+                                <tags>
+                                    <tag>latest</tag>
+                                    <tag>${project.version}</tag>
+                                </tags>
+                                <assembly>
+                                    <descriptor>${project.parent.basedir}/src/main/assembly/assembly.xml</descriptor>
+                                    <mode>tgz</mode>
+                                </assembly>
+                                <args>
+                                    <langsPkg>tesseract-ocr tesseract-ocr-eng</langsPkg>
+                                </args>
+                            </build>
+                        </image>
+                        <image>
+                            <alias>fscrawler-es7-fra</alias>
+                            <name>toto1310/fscrawler:${project.version}-es7-fra</name>
+                            <build> 
+                                <dockerFile>Dockerfile</dockerFile>
+                                <assembly>
+                                    <descriptor>${project.parent.basedir}/src/main/assembly/assembly.xml</descriptor>
+                                    <mode>tgz</mode>
+                                </assembly>
+                                <args>
+                                    <langsPkg>tesseract-ocr tesseract-ocr-fra</langsPkg>
+                                </args>
+                            </build>
+                        </image>
+                        <image>
+                            <alias>fscrawler-es7-jpn</alias>
+                            <name>toto1310/fscrawler:${project.version}-es7-jpn</name>
+                            <build> 
+                                <dockerFile>Dockerfile</dockerFile>
+                                <assembly>
+                                    <descriptor>${project.parent.basedir}/src/main/assembly/assembly.xml</descriptor>
+                                    <mode>tgz</mode>
+                                </assembly>
+                                <args>
+                                    <langsPkg>tesseract-ocr tesseract-ocr-jpn</langsPkg>
+                                </args>
+                            </build>
+                        </image>
+                    </images>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
